@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Account } from 'src/app/models/account';
+import { AccountService } from '../../services/account.service';
 
 @Component({
   selector: 'app-accounts-list',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountsListComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns: string[] = ['name', 'plan', 'enterprise'];
+
+  loading$: Observable<boolean>;
+  accounts$: Observable<Account[]>;
+  noResults$: Observable<boolean>;
+
+  constructor(
+    private accountService: AccountService
+  ) { }
 
   ngOnInit() {
+    this.loading$ = this.accountService.loading$;
+    this.noResults$ = this.accountService.noResults$;
+    this.accounts$ = this.accountService.accounts$;
+  }
+
+  delete(employee: Account) {
+    this.accountService.delete(employee.id);
   }
 
 }

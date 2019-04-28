@@ -1,3 +1,30 @@
-<p>
-  accounts-form works!
-</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field">
+    <div class="control">
+      <mat-form-field>
+        <input formControlName="name" matInput placeholder="Name">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <mat-form-field>
+        <mat-label>Plan</mat-label>
+        <mat-select formControlName="plan">
+          <mat-option>-- Select --</mat-option>
+          <mat-option value="Premium">
+            Premium
+          </mat-option>
+          <mat-option value="Elite">
+            Elite
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <mat-checkbox formControlName="enterprise">Is Enterprise</mat-checkbox>
+    </div>
+  </div>
+</form>
