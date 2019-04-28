@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [],
@@ -11,12 +13,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    ReactiveFormsModule
+    MaterialModule,
+    ReactiveFormsModule,
   ],
   exports: [
     AngularFireModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
-  ]
+    MaterialModule,
+    ReactiveFormsModule,
+  ],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }]
 })
 export class CoreModule { }
