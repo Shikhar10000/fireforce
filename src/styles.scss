@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import "normalize.css";
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "bulma/bulma.sass";
+
+//Overwrite bulma vertical align top to middle
+table {
+  td,
+  th {
+    vertical-align: middle;
+  }
+}
