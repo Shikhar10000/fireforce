@@ -27,4 +27,9 @@
       <mat-checkbox formControlName="enterprise">Is Enterprise</mat-checkbox>
     </div>
   </div>
+  <div class="field">
+    <div class="control">
+        <button [disabled]="form.invalid" mat-button>Save</button>
+    </div>
+  </div>
 </form>

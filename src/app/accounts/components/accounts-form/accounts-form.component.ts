@@ -10,11 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AccountsFormComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({
-    name: new FormControl('', Validators.required),
-    plan: new FormControl('', Validators.required),
-    enterprise: new FormControl(false)
-  });
+  public form: FormGroup;
 
   status$: Observable<string>;
 
@@ -23,6 +19,11 @@ export class AccountsFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl('', Validators.required),
+      plan: new FormControl('', Validators.required),
+      enterprise: new FormControl(false)
+    });
     this.status$ = this.accounts.formStatus$;
   }
 
