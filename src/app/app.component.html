@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
-  <span>Fireforce.io</span>
-  <span style="flex:1 1 auto;"></span>
-  <button mat-button>Accounts</button>
+  <div class="container is-flex">
+    <span>Fireforce.io</span>
+    <span style="flex:1 1 auto;"></span>
+    <button [routerLink]="['accounts']" mat-raised-button color="accent">Accounts</button>
+  </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
