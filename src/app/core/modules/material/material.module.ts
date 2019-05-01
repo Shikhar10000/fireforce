@@ -1,17 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatCardModule } from '@angular/material/card';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatTableModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatIconModule,
+  MatListModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatOptionModule,
+  MatRadioModule
+} from '@angular/material';
 
 
 
@@ -30,6 +39,13 @@ import { MatCardModule } from '@angular/material/card';
     MatTableModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatMomentDateModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatOptionModule,
+    MatRadioModule
   ],
   exports: [
     CommonModule,
@@ -43,6 +59,13 @@ import { MatCardModule } from '@angular/material/card';
     MatTableModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatMomentDateModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatOptionModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }
