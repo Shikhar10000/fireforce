@@ -1,4 +1,4 @@
-import { Account } from '../../../models/account';
+import { Account } from '../account';
 export interface AccountsPage {
     loading: boolean;
     accounts: Account[];

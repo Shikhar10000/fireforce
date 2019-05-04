@@ -1,5 +1,5 @@
-import { Record } from '../models/record';
+// import { Record } from '../models/record';
 export interface ListView {
     loading: boolean;
-    records: Record[];
+    records: any[];
 }

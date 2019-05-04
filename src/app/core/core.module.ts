@@ -6,6 +6,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MaterialModule } from './modules/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FirestoreSettingsToken } from '@angular/fire/firestore';
+import { DynamicFormModule } from './modules/dynamic-forms/dynamic-form.module';
+
 
 @NgModule({
   declarations: [],
@@ -15,12 +17,14 @@ import { FirestoreSettingsToken } from '@angular/fire/firestore';
     AngularFirestoreModule,
     MaterialModule,
     ReactiveFormsModule,
+    DynamicFormModule,
   ],
   exports: [
     AngularFireModule,
     AngularFirestoreModule,
     MaterialModule,
     ReactiveFormsModule,
+    DynamicFormModule,
   ],
   providers: [{ provide: FirestoreSettingsToken, useValue: {} }]
 })

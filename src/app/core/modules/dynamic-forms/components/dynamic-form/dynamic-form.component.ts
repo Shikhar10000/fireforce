@@ -9,8 +9,7 @@ import { IControl } from '../../interfaces/control.interface';
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input()
-  config: IControl[] = [];
+  @Input() config: IControl[] = [];
 
   form: FormGroup;
 

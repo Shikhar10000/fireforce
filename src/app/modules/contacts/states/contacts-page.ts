@@ -1,6 +1,6 @@
 import { ListView } from 'src/app/core/states/list-view.state';
-import { Contacts } from 'src/app/models/contacts';
+import { Contact } from 'src/app/modules/contacts/contact';
 export interface ContactsPage extends ListView {
-    records: Contacts[];
+    records: Contact[];
     formStatus: string;
 }

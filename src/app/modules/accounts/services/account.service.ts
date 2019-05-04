@@ -3,7 +3,7 @@ import { AccountFirestore } from './account.firestore';
 import { AccountsPageStore } from './accounts-page.store';
 import { tap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Account } from 'src/app/models/account';
+import { Account } from 'src/app/modules/accounts/account';
 
 @Injectable({
   providedIn: 'root'
