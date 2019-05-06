@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="field">
+      <div class="control">
+        <mat-form-field>
+          <input formControlName="name" matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+    </div>
+    <!-- <div class="field">
+      <div class="control">
+        <mat-checkbox formControlName="enterprise">Is Enterprise</mat-checkbox>
+      </div>
+    </div> -->
+    <div class="field">
+      <div class="control">
+          <button [disabled]="form.invalid" mat-button>Save</button>
+      </div>
+    </div>
+  </form>

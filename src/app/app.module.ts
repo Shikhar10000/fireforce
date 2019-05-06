@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { AccountsModule } from './modules/accounts/accounts.module';
 import { ContactsModule } from './modules/contacts/contacts.module';
+import { HabitsModule } from './modules/habits/habits.module';
 
 
 
@@ -19,6 +20,7 @@ import { ContactsModule } from './modules/contacts/contacts.module';
     CoreModule,
     AccountsModule,
     ContactsModule,
+    HabitsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

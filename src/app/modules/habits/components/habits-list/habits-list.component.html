@@ -1,0 +1,19 @@
+<div class="box is-flex" style="justify-content:center;" *ngIf="loading$ | async">
+  <mat-spinner [diameter]="30"></mat-spinner>
+</div>
+
+<div class="box has-text-centered" *ngIf="noResults$ | async else list">
+  No results
+</div>
+
+<ng-template #list>
+  <ng-container *ngIf="habits$ | async as habits">
+    <mat-card style="margin-bottom:1rem;" *ngFor="let habit of habits">
+      <div style="display:flex;justify-content: space-between;">
+        <h1 class="title is-marginless">{{habit.name}}</h1>
+        <button mat-mini-fab>^</button>
+      </div>
+    </mat-card>
+    <br>
+  </ng-container>
+</ng-template>

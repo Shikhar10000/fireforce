@@ -2,14 +2,15 @@
   <div class="container is-flex" style="flex:1;justify-content:space-between;">
     <div [routerLink]="['/']">Fireforce.io</div>
     <div>
-      <button [routerLink]="['accounts']" mat-raised-button color="accent">Accounts</button>
-      <button [routerLink]="['contacts']" mat-raised-button color="accent">Contacts</button>
+      <!-- <button [routerLink]="['accounts']" mat-raised-button color="accent">Accounts</button>
+      <button [routerLink]="['contacts']" mat-raised-button color="accent">Contacts</button> -->
+      <button [routerLink]="['habits']" mat-raised-button color="accent">Habits</button>
     </div>
   </div>
 </mat-toolbar>
 
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>
 
 <div>
-  <app-dynamic-form [config]="config"></app-dynamic-form>
+  <!-- <app-dynamic-form [config]="config"></app-dynamic-form> -->
 </div>
